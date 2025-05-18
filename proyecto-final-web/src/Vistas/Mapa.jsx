@@ -33,7 +33,7 @@ const MapView = () => {
       <Row className="w-100 h-100">
         {/* Filtro */}
         <Col xs={12} md={4} className="d-flex justify-content-center align-items-center">
-          <Form className="p-3 card-orange w-100">
+          <Form className="p-3 border rounded bg-light shadow w-100">
             <Form.Group controlId="formComboBox" className="mb-3">
               <Form.Label>Título</Form.Label>
               <Form.Select
@@ -61,18 +61,16 @@ const MapView = () => {
               <Form.Label>Longitud</Form.Label>
               <Form.Control type="text" value={longitude} readOnly />
             </Form.Group>
-          </Form>
-        </Col>
 
-        {/* Botón Volver (fuera de la tarjeta) */}
-        <Col xs={12} className="d-flex justify-content-center mt-3">
-          <Button
-            variant="secondary"
-            onClick={() => navigate(-1)} // Regresa a la página anterior
-            className="w-50"
-          >
-            Volver
-          </Button>
+            {/* Botón Volver */}
+            <Button
+              variant="secondary"
+              onClick={() => navigate(-1)} // Regresa a la página anterior
+              className="w-100 mt-3"
+            >
+              Volver
+            </Button>
+          </Form>
         </Col>
 
         {/* Mapa */}

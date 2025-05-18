@@ -17,8 +17,12 @@ function ListaBitacoras() {
 
   const navigate = useNavigate();
 
-  const handleView = (bitacoraId) => {
+  const handleView2 = (bitacoraId) => {
     navigate(`/editarbitacora2/${bitacoraId}`);
+  };
+
+  const handleView = (bitacoraId) => {
+    navigate(`/bitacora2/${bitacoraId}`);
   };
 
   const handleBack = () => {
@@ -124,7 +128,7 @@ function ListaBitacoras() {
                   <Button variant="success" className="me-2" onClick={() => handleView(bitacora.id)}>
                     <FaEye /> Ver detalles
                   </Button>
-                  <Button variant="warning" className="me-2" onClick={() => handleView(bitacora.id)}>
+                  <Button variant="warning" className="me-2" onClick={() => handleView2(bitacora.id)}>
                     <FaEdit /> Editar
                   </Button>
                   <Button variant="danger" onClick={() => handleDelete(bitacora.id)}>
